@@ -40,19 +40,6 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #d9d9d9;
-}
-
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
@@ -66,14 +53,14 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  height: 100%;
+  margin-top: 78px;
   width: 100%;
   justify-content: flex-end;
 }
 
 .result__video-container {
   position: relative;
-  max-height: 386px;
+  height: 386px;
   cursor: pointer;
 }
 
@@ -110,7 +97,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #ffffff;
   outline-offset: 2px;
 }
@@ -188,11 +175,6 @@ ol {
   height: 15px;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #ffffff;
-  outline-offset: 2px;
-}
-
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
@@ -204,6 +186,7 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   color: #fff;
   cursor: pointer;
+  border: 1px solid white;
 }
 
 .button:active {
@@ -225,7 +208,6 @@ ol {
 }
 
 .search-form__submit-button {
-  border: 1px solid white;
   padding: 5px 72.5px;
   margin-top: 20px;
 }
@@ -238,12 +220,13 @@ ol {
 }
 
 .title {
-  margin-top: 2px;
-  font-family: "Oswald";
+  margin-top: 3px;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 94%;
+  line-height: 95%;
+  letter-spacing: 0.3px;
 }
 
 .content__accent {
@@ -257,6 +240,19 @@ ol {
   max-height: 298px;
   overflow-y: auto;
   flex-direction: column;
+}
+
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
 }
 
 .content__list {
@@ -278,7 +274,7 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: #535151;
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -287,7 +283,7 @@ ol {
 }
 
 .content__card-link:active {
-  background-color: #535151;
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -316,14 +312,14 @@ ol {
   max-width: 100%;
   font-size: 30px;
   text-transform: uppercase;
-  font-family: "Oswald";
-  line-height: 1.1;
-  padding-bottom: 4px;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  line-height: 1.2;
+  padding-bottom: 2px;
 }
 
 .content__video-card-description {
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -344,5 +340,4 @@ ol {
 .more-button {
   margin: 3px;
   padding: 6px;
-  border: 1px solid white;
 }
