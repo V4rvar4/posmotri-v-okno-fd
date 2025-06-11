@@ -230,7 +230,7 @@ ol {
 }
 
 .content__accent {
-  color: #535151;
+  color: #545050;
 }
 
 .content__list-container {
@@ -279,7 +279,9 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-position: under;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1px;
 }
 
 .content__card-link:active {
@@ -314,7 +316,6 @@ ol {
   text-transform: uppercase;
   font-family: "Oswald", "Arial Narrow", sans-serif;
   line-height: 1.2;
-  padding-bottom: 2px;
 }
 
 .content__video-card-description {
@@ -324,7 +325,6 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-  padding-bottom: 5px;
   font-size: 18px;
   font-family: "Fira Sans Condensed", sans-serif;
   line-height: 16.2px;
